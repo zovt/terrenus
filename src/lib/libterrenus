@@ -1,0 +1,10 @@
+!<arch>
+util.cc/        0           0     0     644     121       `
+#include "util.hh"
+
+using namespace terrenus;
+
+bool is_power_of_two(int n) {
+	return (x != 0) && ((x & (x - 1)) == 0);
+}
+
