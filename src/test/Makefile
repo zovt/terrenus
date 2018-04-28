@@ -12,6 +12,9 @@ LDFLAGS =
 	curl -L https://github.com/catchorg/Catch2/releases/download/v2.2.2/catch_reporter_teamcity.hpp -o include/catch_reporter_teamcity.hpp
 	touch .catch2
 
+all: terrenus-test deps
+
+.PHONY: deps
 deps: .catch2
 
 %.o: %.c
@@ -19,8 +22,6 @@ deps: .catch2
 
 terrenus-test: $(obj)
 	$(CXX) -o $@ $^ ../lib/libterrenus.a $(CXXFLAGS) $(LDFLAGS)
-
-all: terrenus-test
 
 clean:
 	$(RM) -f $(obj) terrenus-test
