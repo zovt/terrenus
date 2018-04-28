@@ -32,3 +32,5 @@
 *.app
 *~
 terrenus
+terrenus-test
+.catch2
